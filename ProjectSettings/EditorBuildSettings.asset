@@ -8,4 +8,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Chayanne/Scenes/Main.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  m_configObjects: {}
+  - enabled: 0
+    path: Assets/Oculus/SampleFramework/Usage/CustomHands.unity
+    guid: a4f984fcee593d2418cc61f4a993d46d
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8fb7b84e1687d49fc8a3059161bcb043,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 478f9a46afd2a4296a153572a2f1aa1f,
+      type: 2}
