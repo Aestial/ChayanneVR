@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GrabbableRespawner : MonoBehaviour
 {
-    [SerializeField] float minfloorHeight;
-    Transform original;
+    [SerializeField] float minfloorHeight = 0.0f;
+    Vector3 originalPos = new Vector3();
+    Quaternion originalRot = new Quaternion();
+    new Rigidbody rigidbody;
 
     void Start()
-    {        
-        original.position = transform.position;
-        original.rotation = transform.rotation;
+    {
+        rigidbody = GetComponent<Rigidbody>();
+        originalPos = transform.position;
+        originalRot = transform.rotation;
     }
 
     void Update()
@@ -24,7 +24,9 @@ public class GrabbableRespawner : MonoBehaviour
 
     private void Respawn()
     {
-        transform.position = original.position;
-        transform.rotation = original.rotation;
+        transform.position = originalPos;
+        transform.rotation = originalRot;
+        rigidbody.velocity = Vector3.zero;
+        rigidbody.angularVelocity = Vector3.zero;
     }
 }

@@ -1,18 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ShootGrabbed : MonoBehaviour
 {
-    public OVRInput.Button actionButton;
-    OVRGrabbable ovrGrabbable;
-    Animator animator;      
+    [SerializeField] OVRInput.Button actionButton = default;
+    [SerializeField] Animator animator = default;
+    OVRGrabbable ovrGrabbable;   
 
     void Start()
     {        
-        ovrGrabbable = GetComponent<OVRGrabbable>();
-        animator = GetComponent<Animator>();
+        ovrGrabbable = GetComponent<OVRGrabbable>();        
     }
+
     void Update()
     {
         if (ovrGrabbable.isGrabbed &&
@@ -21,5 +19,4 @@ public class ShootGrabbed : MonoBehaviour
             animator.SetTrigger("Shoot");
         }
     }
-
 }
