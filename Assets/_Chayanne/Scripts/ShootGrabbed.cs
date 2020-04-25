@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShotGrabbed : MonoBehaviour
+public class ShootGrabbed : MonoBehaviour
 {
     public OVRInput.Button actionButton;
     OVRGrabbable ovrGrabbable;
@@ -21,4 +21,5 @@ public class ShotGrabbed : MonoBehaviour
             animator.SetTrigger("Shoot");
         }
     }
+
 }
