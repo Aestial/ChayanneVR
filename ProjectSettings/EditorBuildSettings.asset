@@ -5,12 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/_Chayanne/Scenes/Main.unity
+  - enabled: 0
+    path: Assets/_Chayanne/Scenes/ChayanneConcert.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
     path: Assets/Oculus/SampleFramework/Usage/CustomHands.unity
     guid: a4f984fcee593d2418cc61f4a993d46d
+  - enabled: 0
+    path: Assets/Oculus/SampleFramework/Usage/DistanceGrab.unity
+    guid: 24f58b3f0ca02d44eaec7f50bca538f2
+  - enabled: 1
+    path: Assets/_Chayanne/Scenes/Shooting.unity
+    guid: 0c07ed0d8efe04434afabd78a2075c19
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8fb7b84e1687d49fc8a3059161bcb043,
       type: 2}
