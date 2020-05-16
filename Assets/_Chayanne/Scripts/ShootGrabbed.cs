@@ -2,8 +2,10 @@
 
 public class ShootGrabbed : MonoBehaviour
 {
-    [SerializeField] OVRInput.Button actionButton = default;
     [SerializeField] Animator animator = default;
+    [SerializeField] string animTriggerName = "Fire";
+    [SerializeField] OVRInput.Button actionButton = default;    
+    
     OVRGrabbable ovrGrabbable;   
 
     void Start()
@@ -16,7 +18,7 @@ public class ShootGrabbed : MonoBehaviour
         if (ovrGrabbable.isGrabbed &&
             OVRInput.GetDown(actionButton, ovrGrabbable.grabbedBy.GetController()))
         {
-            animator.SetTrigger("Shoot");
+            animator.SetTrigger(animTriggerName);
         }
     }
 }
