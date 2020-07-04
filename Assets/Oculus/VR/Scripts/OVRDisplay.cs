@@ -166,11 +166,11 @@ public class OVRDisplay
 		UnityEngine.VR.InputTracking.Recenter();
 #endif
 
-        // The current poses are cached for the current frame and won't be updated immediately
-        // after UnityEngine.VR.InputTracking.Recenter(). So we need to wait until next frame
-        // to trigger the RecenteredPose delegate. The application could expect the correct pose
-        // when the RecenteredPose delegate get called.
-        recenterRequested = true;
+		// The current poses are cached for the current frame and won't be updated immediately
+		// after UnityEngine.VR.InputTracking.Recenter(). So we need to wait until next frame
+		// to trigger the RecenteredPose delegate. The application could expect the correct pose
+		// when the RecenteredPose delegate get called.
+		recenterRequested = true;
 		recenterRequestedFrameCount = Time.frameCount;
 
 #if UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN
